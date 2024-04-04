@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+*{
+    margin:0;
+    padding:0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    -ms-overflow-style: none; /*스크롤 없애는 css*/
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* The sidebar menu */
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 280px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #fff; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+
+  /* Style page content */
+  .main {
+    margin-left:160px; /* Same as the width of the sidebar */
+    padding: 0px 0px;
   }
+  /* 커플이미지 css */
+  .couple_img{
+    margin:0;
+    padding:0;
+  }
+  /* 커플 이미지 */
+  .coupleimg{
+    width:240px;
+    height:30vh;
+    object-fit: "object-fit";
+  }
+  
+/*스크롤 없애는 css*/
+::-webkit-scrollbar {
+    display: none; 
 }
+
