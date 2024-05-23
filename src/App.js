@@ -1,7 +1,7 @@
 import './App.css';
-import React,{useEffect,useRef,useState} from 'react';
-
-
+import React from 'react';
+import Comment from './component/Comment.jsx'
+import MainText from './component/MainText.jsx'
 
 // function Sidebar
 const Sidebar = ()=>{
@@ -21,16 +21,49 @@ const Sidebar = ()=>{
   )
 } 
 const Bgimg = () =>{
-  return <img src='./asset/Bgimg.png'></img>
+  return <img src='./asset/Bgimg.png' className='my_bg'></img>
 }
+function Dairy1(){
+  return(
+    <>
+    {/* <img src='./asset/Bgimg.png' className='my_bg'></img> */}
+    <Bgimg/>
+    <div className='page'>
+      <div className='header'>
+        <h4 className='headerleft'>00의 일기</h4>
+        <h4 className='headerright'>00의 일기</h4>
+        
+      </div>
+      <div className='body'>
+        <div className='bodyleft'>
+          <MainText/>
+        </div>
+        <div className='bodyright'>
 
+        </div>
+      </div>
+      <div className='comment'>
+        <div className='commentleft'>
+          <Comment/>
+        </div>
+        <div className='commentright'>
+          <Comment/>
+        </div>
+      </div>
+    
+    </div>
+    </>
+
+  ) 
+}
 
 function App() {
   return(
     <>
-      <Bgimg />
+    <Dairy1/>
+    <Sidebar/>
+    {/* <Bgimg /> */}
       
-      <Sidebar/>
     </>
     
   ) 
